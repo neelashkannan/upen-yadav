@@ -1,9 +1,9 @@
 'use client';
 
-import Image from "next/image";
 import { Section } from "../../../components/Section";
 import { Button } from "../../../components/Button";
 import { useLanguage } from "../../../components/LanguageContext";
+import { withBasePath } from "../../../components/assetPrefix";
 
 const valueCards = [
   {
@@ -83,13 +83,11 @@ export default function BioPageContent() {
             <div className="lg:col-span-1">
               <div className="sticky top-24">
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/hero-portrait.png"
+                  <img
+                    src={withBasePath("/images/hero-portrait.png")}
                     alt={t('hero.imageAlt')}
-                    fill
-                    className="object-cover object-center"
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="w-full h-full object-cover object-center"
+                    loading="eager"
                   />
                   {/* BJP Badge */}
                   <div className="absolute top-4 right-4 bg-accent-saffron rounded-full p-2 shadow-lg">

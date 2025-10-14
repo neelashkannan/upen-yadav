@@ -1,7 +1,7 @@
 'use client';
 
-import Image from "next/image";
 import { useLanguage } from "../../components/LanguageContext";
+import { withBasePath } from "../../components/assetPrefix";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -54,13 +54,11 @@ export default function Home() {
             {/* Image */}
             <div className="relative">
               <div className="relative aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                <Image
-                  src="/images/hero-portrait.png"
+                <img
+                  src={withBasePath("/images/hero-portrait.png")}
                   alt={t('hero.imageAlt')}
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="w-full h-full object-cover object-center"
+                  loading="eager"
                 />
 
                 {/* Overlay gradient */}
@@ -114,12 +112,11 @@ export default function Home() {
             <a href="/vision" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src="/images/vision-card.png"
+                  <img
+                    src={withBasePath("/images/vision-card.png")}
                     alt={t('cards.vision.alt')}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -137,12 +134,11 @@ export default function Home() {
             <a href="/politico" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src="/images/politico-card.png"
+                  <img
+                    src={withBasePath("/images/politico-card.png")}
                     alt={t('cards.politico.alt')}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -160,12 +156,11 @@ export default function Home() {
             <a href="/humanitarian" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src="/images/humanitarian-card.png"
+                  <img
+                    src={withBasePath("/images/humanitarian-card.png")}
                     alt={t('cards.humanitarian.alt')}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -183,12 +178,11 @@ export default function Home() {
             <a href="/speeches" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src="/images/speeches-card.png"
+                  <img
+                    src={withBasePath("/images/speeches-card.png")}
                     alt={t('cards.speeches.alt')}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
