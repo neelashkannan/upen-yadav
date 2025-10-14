@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import "tailwindcss";
+
+/* Import design tokens */
+@import '../../styles/tokens.css';
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* ================================================
+   COMPREHENSIVE TEXT VISIBILITY & LAYERING FIXES
+   ================================================ */
+
+/* 1. TEXT LAYER RESTORATION - High Priority Global Rules */
+* {
+  position: relative;
+  z-index: 10;
+}
+
+/* Backgrounds and overlays should be behind text */
+.background, .overlay, img, div[style*="background"], .absolute.inset-0 {
+  z-index: 1 !important;
+}
+
+/* 2. VISIBILITY & OPACITY FIX - Force full visibility */
+* {
+  opacity: 1 !important;
+  visibility: visible !important;
+  mix-blend-mode: normal !important;
+  background-blend-mode: normal !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* 3. COLOR LOGIC FOR BJP THEME - Smart contrast detection */
+body, p, span, a, h1, h2, h3, h4, h5, h6 {
+  color: #111111 !important;
+}
+
+/* White text on saffron/orange backgrounds */
+[style*="background-color:#FF6F00"],
+[style*="background-color:#ff6f00"],
+.saffron-bg,
+.bg-accent-saffron,
+.bg-gradient-saffron-orange,
+.bg-gradient-saffron-white,
+.bg-\[#FF6F00\],
+.bg-\[#ff6f00\],
+.saffron-section {
+  color: #FFFFFF !important;
+}
+
+/* Dark text on light backgrounds */
+.bg-white,
+.bg-bg-muted,
+.bg-bg-warm,
+.bg-bg-cool,
+.white-section {
+  color: #111111 !important;
+}
+
+/* 4. FONT INHERITANCE FIX - Consistent typography */
+* {
+  font-family: 'Poppins', 'Nunito Sans', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+/* 5. TEXT CONTENT SPECIFIC FIXES */
+h1, h2, h3, h4, h5, h6, p, span, a, button, label, input, textarea, select {
+  position: relative;
+  z-index: 20 !important;
+  color: inherit !important;
+}
+
+/* 6. CONTAINER Z-INDEX MANAGEMENT */
+.container, .grid, .flex, .space-y-*, .section {
+  position: relative;
+  z-index: 1 !important;
+}
+
+/* 7. OVERRIDE PROBLEMATIC CSS PROPERTIES */
+.text-\[ {
+  color: #111111 !important;
+}
+
+.text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900 {
+  color: #111111 !important;
+}
+
+.group:hover .opacity-100 {
+  opacity: 1 !important;
+}
+
+/* 8. ENSURE ALL INTERACTIVE ELEMENTS ARE VISIBLE */
+button, a, input, textarea, select {
+  color: inherit !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 9. FIX ANY REMAINING TRANSPARENCY ISSUES */
+*::before, *::after {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* 10. ADDITIONAL SPECIFIC FIXES FOR KNOWN ISSUES */
+
+/* Fix any remaining text visibility issues in overlays */
+.group:hover .absolute.inset-0 {
+  z-index: 5 !important;
+}
+
+/* Ensure text in cards is always visible */
+.group .p-8, .group .space-y-4 {
+  z-index: 30 !important;
+}
+
+/* Fix image overlays */
+.aspect-\[16\/10\] .absolute.inset-0 {
+  z-index: 2 !important;
+}
+
+/* Ensure navigation text is always visible */
+nav a, nav span, nav button {
+  z-index: 50 !important;
+}
+
+/* Fix any remaining transparency issues */
+* {
+  color: currentColor !important;
+}
+
+/* 11. DEBUG MODE - Uncomment to visualize text boxes */
+/*
+* {
+  outline: 1px solid rgba(255, 111, 0, 0.2);
+}
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-md);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography - Modern BJP Theme */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  margin: 0;
+  color: var(--color-text);
+  letter-spacing: 0.025em; /* Slight tracking for modern look */
+}
+
+h1 {
+  font-size: var(--font-4xl);
+  font-weight: 700;
+  letter-spacing: 0.05em; /* Uppercase feel */
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--font-3xl);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+h3 {
+  font-size: var(--font-2xl);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+h4 {
+  font-size: var(--font-xl);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: var(--font-lg);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: var(--font-md);
+  font-weight: 500;
+}
+
+p {
+  margin: 0 0 var(--space-4) 0;
+  line-height: var(--leading-relaxed);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links - Modern BJP Theme */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Buttons - Modern BJP Theme */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-heading);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--gradient-saffron-orange);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #FF8C00 0%, #E55D00 100%);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-inverse);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  transform: translateY(-2px);
+}
+
+/* Form elements - Modern BJP Theme */
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: var(--font-md);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: all var(--transition-normal);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.1);
+}
+
+/* Utility classes - Modern BJP Theme */
+.text-accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+}
+
+.container {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.section {
+  padding: var(--rhythm-vertical) 0;
+}
+
+.section-sm {
+  padding: var(--space-12) 0;
+}
+
+.section-lg {
+  padding: var(--space-20) 0;
+}
+
+/* Responsive utilities - Modern BJP Theme */
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  .section {
+    padding: var(--rhythm-mobile) 0;
+  }
+
+  .section-lg {
+    padding: var(--rhythm-mobile) 0;
+  }
+}

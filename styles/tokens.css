@@ -1,0 +1,125 @@
+/* Design Tokens - Upen Yadav Website */
+/* Extracted and recreated from https://dhananjaisingh.com/ */
+
+:root {
+  /* Typography - Modern BJP Theme */
+  --font-heading: 'Poppins', 'Noto Sans Devanagari', 'Nunito Sans', 'Helvetica Neue', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Poppins', 'Noto Sans Devanagari', 'Nunito Sans', 'Helvetica Neue', 'Segoe UI', system-ui, sans-serif;
+  --font-accent: 'Noto Sans Devanagari', 'Poppins', 'Nunito Sans', 'Times New Roman', serif;
+
+  /* Font Sizes */
+  --font-4xl: 2.5rem; /* 40px */
+  --font-3xl: 2rem;   /* 32px */
+  --font-2xl: 1.75rem; /* 28px */
+  --font-xl: 1.5rem;   /* 24px */
+  --font-lg: 1.25rem;  /* 20px */
+  --font-md: 1rem;     /* 16px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-xs: 0.75rem;  /* 12px */
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+
+  /* Colors - Modern BJP Theme */
+  --color-primary: #FF6F00;        /* Primary saffron - core BJP tone */
+  --color-primary-dark: #E55D00;   /* Darker saffron for hover states */
+  --color-primary-light: #FF8C00;  /* Lighter saffron for accents */
+
+  --color-secondary: #111111;       /* Secondary dark accent - black */
+  --color-secondary-dark: #000000; /* Darker black for emphasis */
+  --color-secondary-light: #333333; /* Lighter black for accents */
+
+  --color-accent-saffron: #FF6F00;   /* Saffron - warmth, positivity */
+  --color-accent-orange: #FF8C00;    /* Orange - energy, action */
+  --color-accent-green: #138808;     /* Green - growth, harmony */
+  --color-accent-white: #FFFFFF;     /* White - purity, peace */
+
+  /* Background Colors - Modern BJP Theme */
+  --color-bg: #ffffff;             /* Pure white background */
+  --color-bg-muted: #FFF6E9;       /* Light saffron-tinted background */
+  --color-bg-warm: #FFF8F0;        /* Warm saffron-white */
+  --color-bg-cool: #FDFDFD;        /* Cool off-white background */
+
+  /* Text Colors - Modern BJP Theme */
+  --color-text: #1a1a1a;           /* Dark black for high contrast */
+  --color-text-muted: #2d3748;     /* Medium gray text - darker for better contrast */
+  --color-text-light: #4a5568;     /* Light gray text - darker for better contrast */
+  --color-text-inverse: #ffffff;   /* White text for dark backgrounds */
+
+  /* Border Colors - Modern BJP Theme */
+  --color-border: #E5E5E5;         /* Light border */
+  --color-border-muted: #D4D4D4;   /* Muted border */
+  --color-border-dark: #333333;    /* Dark border for emphasis */
+
+  /* State Colors - Modern BJP Theme */
+  --color-success: #FF6F00;        /* Success saffron */
+  --color-warning: #FF8C00;        /* Warning orange */
+  --color-error: #dc2626;          /* Error red */
+  --color-info: #FF6F00;           /* Info saffron */
+
+  /* Shadow System - Modern BJP Theme */
+  --shadow-sm: 0 1px 2px 0 rgb(255 111 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(255 111 0 / 0.15), 0 2px 4px -2px rgb(255 111 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(255 111 0 / 0.2), 0 4px 6px -4px rgb(255 111 0 / 0.15);
+  --shadow-xl: 0 20px 25px -5px rgb(255 111 0 / 0.25), 0 8px 10px -6px rgb(255 111 0 / 0.2);
+
+  /* Border Radius - Modern BJP Theme */
+  --radius-sm: 0.375rem;  /* 6px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-full: 9999px;  /* Fully rounded */
+
+  /* Spacing Scale - Modern BJP Theme */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  /* Layout - Modern BJP Theme */
+  --wrap: 1200px;       /* Max content width */
+  --gutter: 1.5rem;     /* Side padding */
+  --rhythm-vertical: 3.75rem; /* 60px - Desktop vertical rhythm */
+  --rhythm-mobile: 1.875rem;   /* 30px - Mobile vertical rhythm */
+
+  /* Z-index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal: 1040;
+  --z-popover: 1050;
+  --z-tooltip: 1060;
+
+  /* Transitions - Modern BJP Theme */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+
+  /* Breakpoints (for reference) */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Modern BJP Gradients */
+  --gradient-saffron-orange: linear-gradient(90deg, #FF8C00 0%, #FF6F00 100%);
+  --gradient-saffron-white: linear-gradient(135deg, #FF6F00 0%, #FFFFFF 50%, #FF6F00 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(255, 111, 0, 0.02) 0%, rgba(255, 111, 0, 0.05) 100%);
+}
