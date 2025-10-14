@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import { useLanguage } from "../../components/LanguageContext";
 import { withBasePath } from "../../components/assetPrefix";
 
@@ -36,18 +37,18 @@ export default function Home() {
 
               {/* Action buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/bio"
+                <Link
+                  href={withBasePath("/bio")}
                   className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-accent-saffron text-white hover:bg-accent-saffron/90 focus:ring-accent-saffron shadow-lg hover:shadow-xl hover:-translate-y-1 px-8 py-4 text-lg rounded-xl"
                 >
                   {t('hero.cta.primary')}
-          </a>
-          <a
-                  href="/contact"
+          </Link>
+          <Link
+                  href={withBasePath("/contact")}
                   className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-accent-saffron text-accent-saffron hover:bg-accent-saffron hover:text-white focus:ring-accent-saffron px-8 py-4 text-lg rounded-xl"
                 >
                   {t('hero.cta.secondary')}
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -109,7 +110,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <a href="/vision" className="group">
+            <Link href={withBasePath("/vision")} className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
@@ -129,9 +130,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="/politico" className="group">
+            <Link href={withBasePath("/politico")} className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
@@ -151,9 +152,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="/humanitarian" className="group">
+            <Link href={withBasePath("/humanitarian")} className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
@@ -173,9 +174,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="/speeches" className="group">
+            <Link href={withBasePath("/speeches")} className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
@@ -195,7 +196,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -225,18 +226,18 @@ export default function Home() {
               {t('cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                href={withBasePath("/contact")}
                 className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white text-accent-saffron hover:bg-white/90 focus:ring-white shadow-lg hover:shadow-xl hover:-translate-y-1 px-8 py-4 text-lg rounded-xl"
               >
                 {t('cta.primary')}
-        </a>
-        <a
-                href="/vision"
+        </Link>
+        <Link
+                href={withBasePath("/vision")}
                 className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-white text-white hover:bg-white hover:text-accent-saffron focus:ring-white px-8 py-4 text-lg rounded-xl"
               >
                 {t('cta.secondary')}
-              </a>
+              </Link>
             </div>
           </div>
     </div>
