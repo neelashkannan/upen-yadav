@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useLanguage } from "../../components/LanguageContext";
-import { withBasePath } from "../../components/assetPrefix";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -38,13 +37,13 @@ export default function Home() {
               {/* Action buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href={withBasePath("/bio")}
+                  href="/bio"
                   className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-accent-saffron text-white hover:bg-accent-saffron/90 focus:ring-accent-saffron shadow-lg hover:shadow-xl hover:-translate-y-1 px-8 py-4 text-lg rounded-xl"
                 >
                   {t('hero.cta.primary')}
           </Link>
           <Link
-                  href={withBasePath("/contact")}
+                  href="/contact"
                   className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-accent-saffron text-accent-saffron hover:bg-accent-saffron hover:text-white focus:ring-accent-saffron px-8 py-4 text-lg rounded-xl"
                 >
                   {t('hero.cta.secondary')}
@@ -56,7 +55,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
-                  src={withBasePath("/images/hero-portrait.png")}
+                  src="images/hero-portrait.png"
                   alt={t('hero.imageAlt')}
                   className="w-full h-full object-cover object-center"
                   loading="eager"
@@ -110,11 +109,11 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Link href={withBasePath("/vision")} className="group">
+            <Link href="/vision" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
-                    src={withBasePath("/images/vision-card.png")}
+                    src="images/vision-card.png"
                     alt={t('cards.vision.alt')}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -132,11 +131,11 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href={withBasePath("/politico")} className="group">
+            <Link href="/politico" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
-                    src={withBasePath("/images/politico-card.png")}
+                    src="images/politico-card.png"
                     alt={t('cards.politico.alt')}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -154,11 +153,11 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href={withBasePath("/humanitarian")} className="group">
+            <Link href="/humanitarian" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
-                    src={withBasePath("/images/humanitarian-card.png")}
+                    src="images/humanitarian-card.png"
                     alt={t('cards.humanitarian.alt')}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -176,11 +175,11 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href={withBasePath("/speeches")} className="group">
+            <Link href="/speeches" className="group">
               <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
-                    src={withBasePath("/images/speeches-card.png")}
+                    src="images/speeches-card.png"
                     alt={t('cards.speeches.alt')}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -227,13 +226,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href={withBasePath("/contact")}
+                href="/contact"
                 className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white text-accent-saffron hover:bg-white/90 focus:ring-white shadow-lg hover:shadow-xl hover:-translate-y-1 px-8 py-4 text-lg rounded-xl"
               >
                 {t('cta.primary')}
         </Link>
         <Link
-                href={withBasePath("/vision")}
+                href="/vision"
                 className="inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-white text-white hover:bg-white hover:text-accent-saffron focus:ring-white px-8 py-4 text-lg rounded-xl"
               >
                 {t('cta.secondary')}
