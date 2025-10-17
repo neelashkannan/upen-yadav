@@ -83,7 +83,7 @@ export default function BioPageContent() {
               <div className="sticky top-24">
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src={"../images/hero-portrait.png"}
+                    src={"..images/hero-portrait.png"}
                     alt={t('hero.imageAlt')}
                     className="w-full h-full object-cover object-center"
                     loading="eager"
